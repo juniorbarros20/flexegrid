@@ -2,7 +2,6 @@
     font-family: 'icones';
     src: url(../font/icones.ttf);
 }
-
 body{
     background-color:#1D232A;
     font-size:'Open Sans','icones', sans-serif;
@@ -19,11 +18,13 @@ body{
 }
 
 .cabecalho__menu i::before {
+    font-family: 'icones';
     content:"\e904";
     font-size: 24px;
 }
 
-.cabecalho__noficacao i::before {
+.cabecalho__notificacao i::before {
+    font-family: 'icones';
     content: "\e906";
     font-size: 24px;
 }
@@ -41,7 +42,7 @@ body{
     position: absolute;
     left: -100vw;
     transition: .25s;
-    /*z-index: 99;*/
+    z-index: 99;
 }
 
 .menu-lateral--ativo{
@@ -68,6 +69,7 @@ body{
 }
 
 .menu-lateral__link::before{
+    font-family: 'icones';
     content: "\e900";
     width: 24px;
     height: 24px;
@@ -76,20 +78,97 @@ body{
     left: 24px;
 }
 .menu-lateral__link--inicio::before{
+    font-family: 'icones';
     content: "\e902";
 }
 .menu-lateral__link--videos::before{
+    font-family: 'icones';
     content: "\e90e";
 }
 .menu-lateral__link--picos::before{
+    font-family: 'icones';
     content: "\e909";
 }
 .menu-lateral__link--integrantes::before{
+    font-family: 'icones';
     content: "\e903";
 }
 .menu-lateral__link--camisas::before{
+    font-family: 'icones';
     content: "\e900";
 }
 .menu-lateral__link--pinturas::before{
+    font-family: 'icones';
     content: "\e90a";
+}
+
+.principal {
+    padding: 24px 16px;
+}
+
+.titulo-pagina{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.cartao {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao__conteudo {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cartao__titulo{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.catao__perfil{
+    color:#95999C;]
+    font-size: 0.9rem;
+}
+
+.cartao__info{
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.cartao__info--tempo{
+    font-family: 'icones';
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao__info--visualizacao{
+    font-family: 'icones';
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao__botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.cartao__botao--destaque--play::before{
+    font-family: 'icones';
+    content: "\e90b";
+    font-size: 24px;
+}
+.cartao__botao--destaque{
+    width: 100%;
+}
+.cartao__boatao--destaque::before{
+    margin-right: 8px;
 }
