@@ -7,6 +7,12 @@ body{
     font-size:'Open Sans','icones', sans-serif;
     color: #FFFFFF;
 }
+@media screen and (min-width: 1440px){
+    body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
 
 .cabecalho {
     display: flex;
@@ -33,16 +39,33 @@ body{
     width: 40px;
 }
 
+.cabecalho__perfil {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        background-color: #1D232A;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+
+    }
+}
+
 .menu-lateral{
     display: flex;
     flex-direction: column;
     background-color: #15191C;
     width: 75vw;
     height: 100vh;
+
     position: absolute;
     left: -100vw;
     transition: .25s;
-    z-index: 99;
+    /*z-index: 99;*/
 }
 
 .menu-lateral--ativo{
@@ -104,10 +127,16 @@ body{
 
 .principal {
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .titulo-pagina{
     font-size: 1.5rem;
+    font-weight: 700;
+}
+.titulo-secao {
+    font-size: 1.2rem;
     font-weight: 700;
 }
 .cartao {
@@ -117,19 +146,30 @@ body{
     background-color: #2C343A;
 }
 
+.cartao--destaque {
+    margin-bottom: 16px;
+}
+
 .cartao__conteudo {
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.cartao__destaque{
+    grid-column: span 2;
 }
 
 .cartao__titulo{
     font-size: 1.2rem;
     font-weight: 700;
+    grid-column: span 2;
 }
 .cartao__perfil{
     color:#95999C;
     font-size: 0.9rem;
+    grid-column: span 2;
 }
 
 .cartao__info{
@@ -138,13 +178,13 @@ body{
     color: #95999C;
 }
 
-.cartao__info--tempo{
+.cartao__info--tempo::before{
     font-family: 'icones';
     content: "\e90c";
     margin-right: 8px;
 }
 
-.cartao__info--visualizacao{
+.cartao__info--visualizacao ::before{
     font-family: 'icones';
     content: "\e90f";
     margin-right: 8px;
@@ -159,16 +199,30 @@ body{
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
+    color: #FFFFFF;
 }
 
 .cartao__botao--destaque--play::before{
     font-family: 'icones';
     content: "\e90b";
     font-size: 24px;
+    color: #FFFFFF;
+}
+
+.cartao__botao--play::before{
+    font-family: 'icones';
+    content: "\e90b";
+    font-size: 24px;
 }
 .cartao__botao--destaque{
     width: 100%;
+    grid-column: span 2;
 }
 .cartao__boatao--destaque::before{
     margin-right: 8px;
+}
+.secao {
+    display: grid;
+    gap: 16px;
 }
